@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PopFizzle</string>
+    <string name="username_Label">Username:</string>
+    <string name="password_Label">Password:</string>
+    <string name="loginBtn">Login</string>
+    <string name="createAccountBtn">Create Account</string>
+    <string name="cancelBtn">Cancel</string>
+    <string name="reenterPassword_Label">Re-enter Password:</string>
+    <string name="emailLabel">Email:</string>
+    <string name="firstnameLabell">Firstname:</string>
+    <string name="lastnameLabel">Lastname:</string>
+    <string name="createBtn">Create Account</string>
+    <string name="Welcome">Welcome to PopFizzle</string>
+    <string name="interestsLabel">What are your interests?</string>
+    <string name="logoutBtn">Logout</string>
+
+    <string name="title_activity_splashscreen">splashscreen</string>
+
+    <string name="text_not_member">No account yet? Create one</string>
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.edeleon8425.popfizzle.PFLogin">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+    <!-- The username -->
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/username_Label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="130dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/UsernameEditTextLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/usernameLabel"
+        android:layout_toRightOf="@+id/usernameLabel"
+        android:ems="8"
+        android:text=""
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="160dp">
+    </EditText>
+
+    <!-- The password -->
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/password_Label"
+        android:layout_alignLeft="@+id/usernameLabel"
+        android:layout_below="@+id/usernameLabel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/passwordEditTextLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/passwordLabel"
+        android:text=""
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/passwordLabel"
+        android:layout_alignRight="@+id/UsernameEditTextLogin"
+        android:layout_alignEnd="@+id/UsernameEditTextLogin"
+        android:layout_toRightOf="@+id/passwordLabel"
+        android:layout_toEndOf="@+id/passwordLabel">
+    </EditText>
+
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/passwordEditTextLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorAccent"
+        android:text="@string/loginBtn"
+        android:textSize="10dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewLinkRegister"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:gravity="center"
+        android:text="@string/text_not_member"
+        android:textSize="16dp" />
+
+</RelativeLayout>
+</ScrollView>

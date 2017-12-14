@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.edeleon8425.popfizzle.PFcreateAccount">
+
+    <!-- The logo -->
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+    <!-- The username -->
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/username_Label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="130dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/UsernameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/usernameLabel"
+        android:layout_toRightOf="@+id/usernameLabel"
+        android:ems="10"
+        android:text=""
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="160dp">
+    </EditText>
+
+    <!-- The password -->
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/password_Label"
+        android:layout_alignLeft="@+id/usernameLabel"
+        android:layout_below="@+id/usernameLabel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/passwordLabel"
+        android:text=""
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/passwordLabel"
+        android:layout_alignRight="@+id/UsernameEditText"
+        android:layout_alignEnd="@+id/UsernameEditText"
+        android:layout_toRightOf="@+id/passwordLabel"
+        android:layout_toEndOf="@+id/passwordLabel">
+
+    </EditText>
+
+    <!-- Re-enter password -->
+    <TextView
+        android:id="@+id/reenterPasswordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/reenterPassword_Label"
+        android:layout_alignLeft="@+id/passwordLabel"
+        android:layout_below="@+id/passwordLabel"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/reenterPasswordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/reenterPasswordLabel"
+        android:text=""
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:layout_marginLeft="40dp"
+        android:layout_alignBottom="@+id/passwordLabel"
+        android:layout_alignRight="@+id/passwordEditText"
+        android:layout_alignEnd="@+id/passwordEditText"
+        android:layout_toRightOf="@+id/passwordEditText"
+        android:layout_toEndOf="@+id/passwordLabel">
+
+    </EditText>
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/emailLabel"
+        android:layout_alignLeft="@+id/reenterPasswordLabel"
+        android:layout_below="@+id/reenterPasswordLabel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/emailLabel"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/passwordLabel"
+        android:layout_alignRight="@+id/passwordEditText"
+        android:layout_alignEnd="@+id/passwordEditText"
+        android:layout_toRightOf="@+id/passwordEditText"
+        android:layout_toEndOf="@+id/passwordLabel">
+
+    </EditText>
+
+    <!-- firstname -->
+    <TextView
+        android:id="@+id/firstnameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/firstnameLabell"
+        android:layout_alignLeft="@+id/emailLabel"
+        android:layout_below="@+id/emailLabel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/firstnameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/firstnameLabel"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/passwordLabel"
+        android:layout_alignRight="@+id/emailEditText"
+        android:layout_alignEnd="@+id/emailEditText"
+        android:layout_toRightOf="@+id/emailEditText"
+        android:layout_toEndOf="@+id/passwordLabel">
+
+    </EditText>
+
+    <!-- lastname -->
+    <TextView
+        android:id="@+id/lastnameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/lastnameLabel"
+        android:layout_alignLeft="@+id/firstnameLabel"
+        android:layout_below="@+id/firstnameLabel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/lastnameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lastnameLabel"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/passwordLabel"
+        android:layout_alignRight="@+id/passwordEditText"
+        android:layout_alignEnd="@+id/passwordEditText"
+        android:layout_toRightOf="@+id/passwordEditText"
+        android:layout_toEndOf="@+id/passwordLabel">
+    </EditText>
+
+        <Button
+            android:id="@+id/createBtn"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:background="@color/colorAccent"
+            android:text="@string/createBtn"
+            android:textSize="7dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignLeft="@+id/checkBox3"
+            android:layout_below="@+id/checkBox3"
+            />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:background="@color/colorAccent"
+            android:text="@string/cancelBtn"
+            android:textSize="7dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignLeft="@+id/checkBox2"
+            android:layout_below="@+id/checkBox2"/>
+
+    <!-- Interests check boxes -->
+    <TextView
+        android:id="@+id/interestsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/interestsLabel"
+        android:layout_alignLeft="@+id/lastnameLabel"
+        android:layout_below="@+id/lastnameLabel"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="52dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="News"
+        android:layout_below="@+id/interestsLabel"
+        android:layout_toLeftOf="@+id/lastnameEditText"
+        android:layout_toStartOf="@+id/lastnameEditText"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celebrity Gossip"
+        android:layout_alignBaseline="@+id/checkBox3"
+        android:layout_alignBottom="@+id/checkBox3"
+        android:layout_alignRight="@+id/lastnameEditText"
+        android:layout_alignEnd="@+id/lastnameEditText" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quizzes"
+        android:layout_below="@+id/interestsLabel"
+        android:layout_toRightOf="@+id/firstnameLabel"
+        android:layout_toEndOf="@+id/firstnameLabel" />
+
+</RelativeLayout>
+</ScrollView>
