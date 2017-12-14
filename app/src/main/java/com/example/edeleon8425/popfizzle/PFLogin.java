@@ -43,7 +43,7 @@ public class PFLogin extends AppCompatActivity {
                 String upassword = password.getText().toString();
                 int id= checkUser(new User(user_name,upassword));
                 if (user_name.matches("") || upassword.matches("")) {
-                    Toast.makeText(getApplicationContext(), "Something is missing"
+                    Toast.makeText(getApplicationContext(), "Something is missing, Opps!"
                             , Toast.LENGTH_SHORT).show();
                 }
                 else if(id==-1)
