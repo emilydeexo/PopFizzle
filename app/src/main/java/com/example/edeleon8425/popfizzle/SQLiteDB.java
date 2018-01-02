@@ -6,13 +6,15 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class SQLiteDB extends SQLiteOpenHelper {
 
     //Db Version
     private static final int Db_Version=1;
 
     //Db Name
-    private static final String Db_Name="PopFizzleDB5";
+    private static final String Db_Name="PopFizzleDB7";
 
     //table names
     private static final String Table_Name="Users";
@@ -34,8 +36,8 @@ public class SQLiteDB extends SQLiteOpenHelper {
 
     //Creating News Columns
     private static final String News_id="id";
-    private static final String News_name="qname";
-    private static final String News_genre="qgenre";
+    private static final String News_name="nname";
+    private static final String News_genre="ngenre";
 
     public SQLiteDB(Context context)
     {
@@ -85,6 +87,19 @@ public class SQLiteDB extends SQLiteOpenHelper {
         //close the database to avoid any leak
         db.close();
     }
+    //Add new User by calling this method
+    public void addNews(News newss)
+    {
+        // getting db instance for writing the user
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues cv=new ContentValues();
+        cv.put(News_name,newss.getName());
+        cv.put(News_genre,newss.getGenre());
+        //inserting row
+        db.insert(Table_Name2, null, cv);
+        //close the database to avoid any leak
+        db.close();
+    }
     public int checkUser(User us)
     {
         int id=-1;
@@ -98,5 +113,15 @@ public class SQLiteDB extends SQLiteOpenHelper {
         return id;
     }
 
+    public ArrayList<News> getData() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<News> use= new ArrayList<News>();
+        Cursor result = db.rawQuery("select * from "+Table_Name2 , null);
+        while(result.moveToNext()){
+            use.add( new News(result.getString(result.getColumnIndex(News_name)), result.getString(result.getColumnIndex(News_genre))));
+
+        }
+        return use;
+    }
 }
 

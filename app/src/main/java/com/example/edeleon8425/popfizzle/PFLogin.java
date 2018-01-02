@@ -60,6 +60,11 @@ public class PFLogin extends AppCompatActivity {
         db=new SQLiteDB(PFLogin.this);
         //inserting dummy user
         db.addUser(new User("Admin", "Admin", "Admin", "Admin", "Admin"));
+        db.addUser(new User("Emily", "Emily", "Emily", "Emily", "Emily"));
+
+        db.addNews(new News("Mcdonalds Shuts Down!", "Financial"));
+        db.addNews(new News("Kim Kardashian Divorces Kanye", "Celebrity"));
+        db.addNews(new News("Stock Market Drops", "Financial"));
     }
     public int checkUser(User user)
         {

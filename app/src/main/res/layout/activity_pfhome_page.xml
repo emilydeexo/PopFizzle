@@ -31,6 +31,15 @@
         tools:layout_editor_absoluteY="52dp"
         tools:layout_editor_absoluteX="16dp" />
 
+    <ListView
+        android:id="@+id/newsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Welcome"
+        android:layout_marginTop="35dp"
+        android:textStyle="bold">
+    </ListView>
+
     <Button
         android:id="@+id/logoutButton"
         style="@style/Widget.AppCompat.Button.Colored"
