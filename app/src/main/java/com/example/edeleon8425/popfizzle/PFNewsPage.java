@@ -1,23 +1,20 @@
 package com.example.edeleon8425.popfizzle;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class PFhomePage extends AppCompatActivity {
+public class PFNewsPage extends AppCompatActivity {
 
-    Button findoutActivity;
+    NewsAdapter newsAdapter = null;
+    ListView listView = null;
+    SQLiteDB db = null;
+    ArrayList<News> use = null;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -30,21 +27,21 @@ public class PFhomePage extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.item1:
-                Intent intent1 = new Intent(PFhomePage.this, PFhomePage.class);
+                Intent intent1 = new Intent(PFNewsPage.this, PFhomePage.class);
                 startActivity(intent1);
                 break;
             case R.id.item2:
-                Intent intent2 = new Intent(PFhomePage.this, PFNewsPage.class);
+                Intent intent2 = new Intent(PFNewsPage.this, PFNewsPage.class);
                 startActivity(intent2);
                 break;
             case R.id.item5:
-                Intent intent5 = new Intent(PFhomePage.this, ContactUs.class);
+                Intent intent5 = new Intent(PFNewsPage.this, ContactUs.class);
                 startActivity(intent5);
                 break;
             case R.id.item7:
-                Intent intent7 = new Intent(PFhomePage.this, PFLogin.class);
+                Intent intent7 = new Intent(PFNewsPage.this, PFLogin.class);
                 startActivity(intent7);
                 break;
             default:
@@ -57,17 +54,14 @@ public class PFhomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pfhome_page);
+        setContentView(R.layout.activity_pfnews_page);
+        db = new SQLiteDB(this);
 
-        findoutActivity = (Button) findViewById(R.id.nameButton);
-        findoutActivity.setOnClickListener(new View.OnClickListener() {
+        use = db.getData();
+        newsAdapter = new NewsAdapter(this, R.layout.layout_news, use);
 
-            @Override
-            public void onClick(View v) {
-                    Toast.makeText(PFhomePage.this,"Username: "+User.getName,Toast.LENGTH_SHORT).show();
-
-            }
-        });
+        listView = (ListView) findViewById(R.id.newsList);
+        listView.setAdapter(newsAdapter);
 
     }
 }

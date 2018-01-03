@@ -1,23 +1,19 @@
 package com.example.edeleon8425.popfizzle;
 
 import android.content.Intent;
-import android.database.Cursor;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+public class ContactUs extends AppCompatActivity {
 
-public class PFhomePage extends AppCompatActivity {
-
-    Button findoutActivity;
+    Button sendEmail;
+    Button sendSMS;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -32,19 +28,19 @@ public class PFhomePage extends AppCompatActivity {
 
         switch(item.getItemId()) {
             case R.id.item1:
-                Intent intent1 = new Intent(PFhomePage.this, PFhomePage.class);
+                Intent intent1 = new Intent(ContactUs.this, PFhomePage.class);
                 startActivity(intent1);
                 break;
             case R.id.item2:
-                Intent intent2 = new Intent(PFhomePage.this, PFNewsPage.class);
+                Intent intent2 = new Intent(ContactUs.this, PFNewsPage.class);
                 startActivity(intent2);
                 break;
             case R.id.item5:
-                Intent intent5 = new Intent(PFhomePage.this, ContactUs.class);
+                Intent intent5 = new Intent(ContactUs.this, ContactUs.class);
                 startActivity(intent5);
                 break;
             case R.id.item7:
-                Intent intent7 = new Intent(PFhomePage.this, PFLogin.class);
+                Intent intent7 = new Intent(ContactUs.this, PFLogin.class);
                 startActivity(intent7);
                 break;
             default:
@@ -57,17 +53,27 @@ public class PFhomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pfhome_page);
+        setContentView(R.layout.activity_contact_us);
 
-        findoutActivity = (Button) findViewById(R.id.nameButton);
-        findoutActivity.setOnClickListener(new View.OnClickListener() {
-
+        sendSMS = (Button) findViewById(R.id.textButton);
+        sendSMS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Toast.makeText(PFhomePage.this,"Username: "+User.getName,Toast.LENGTH_SHORT).show();
-
+                Intent sendIntent = new Intent(Intent.ACTION_SENDTO);
+                sendIntent.setData(Uri.parse("sms:5195555555"));
+                startActivity(sendIntent);
+            }
+        });
+        sendEmail = (Button) findViewById(R.id.emailButton);
+        sendEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent(Intent.ACTION_SENDTO);
+                sendIntent.setData(Uri.parse("mailto:helpdesk@popfizzle.com"));
+                startActivity(sendIntent);
             }
         });
 
     }
 }
+

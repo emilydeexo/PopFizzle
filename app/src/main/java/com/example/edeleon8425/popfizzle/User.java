@@ -2,6 +2,7 @@ package com.example.edeleon8425.popfizzle;
 
 public class User {
 
+    public static String getName;
     //variables
     int id;
     String uname;
@@ -38,7 +39,8 @@ public class User {
 
     //getting name
     public String getName() {
-        return uname;
+        getName=uname;
+        return getName;
     }
     //setting name
     public void setName(String uname) {

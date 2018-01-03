@@ -8,15 +8,16 @@
         android:orderInCategory="1"
         android:textSize="10sp"
         app:showAsAction="always"
-        android:title="News"/>
+        android:title="Home"/>
     <item
         android:id="@+id/item2"
-        android:orderInCategory="2"
+        android:orderInCategory="1"
+        android:textSize="10sp"
         app:showAsAction="always"
-        android:title="Quizzes"/>
-    <item
-        android:id="@+id/item3"
-        android:orderInCategory="3"
-        app:showAsAction="always"
-        android:title="Videos"/>
+        android:title="News"/>
+    <!--<item-->
+        <!--android:id="@+id/item3"-->
+        <!--android:orderInCategory="2"-->
+        <!--app:showAsAction="always"-->
+        <!--android:title="Quizzes"/>-->
 </menu>

@@ -33,20 +33,21 @@
     </compatible-screens>
 
     <application
+        android:name=".stetho"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:name=".stetho"
         android:theme="@style/AppTheme">
-        <activity android:name=".PFLogin"
-            android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+        <activity
+            android:name=".PFLogin"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
             android:name=".PFcreateAccount"
-            android:label="Sign Up"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".PFhomePage"/>
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Sign Up" />
+        <activity android:name=".PFhomePage" />
         <activity
             android:name=".splashscreen"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -58,6 +59,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PFNewsPage" />
+        <activity android:name=".ContactUs"></activity>
     </application>
 
 </manifest>
