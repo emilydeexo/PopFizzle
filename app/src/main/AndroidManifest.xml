@@ -46,8 +46,7 @@
             android:name=".PFcreateAccount"
             android:label="Sign Up"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".PFhomePage"
-            />
+        <activity android:name=".PFhomePage"/>
         <activity
             android:name=".splashscreen"
             android:configChanges="orientation|keyboardHidden|screenSize"
