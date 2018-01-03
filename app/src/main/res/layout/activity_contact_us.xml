@@ -12,12 +12,29 @@
         android:layout_height="match_parent"
         tools:context="com.example.edeleon8425.popfizzle.ContactUs">
 
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView" />
+        <Button
+            android:id="@+id/downloadButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="35dp"
+            android:background="@color/colorAccent"
+            android:text="Text Us"
+            android:textSize="10dp" />
     <Button
         android:id="@+id/textButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:layout_centerHorizontal="true"
+        android:layout_below="@+id/downloadButton"
         android:layout_marginTop="35dp"
         android:background="@color/colorAccent"
         android:text="Text Us"
