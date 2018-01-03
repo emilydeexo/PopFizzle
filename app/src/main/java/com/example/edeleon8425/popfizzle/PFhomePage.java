@@ -22,6 +22,7 @@ public class PFhomePage extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the main_menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_bar, menu);
         return true;
     }
 
@@ -32,7 +33,7 @@ public class PFhomePage extends AppCompatActivity {
             case R.id.item1:
                 //your action
                 break;
-            case R.id.item2:
+            case R.id.item6:
                 Intent intent = new Intent(PFhomePage.this, PFLogin.class);
                 startActivity(intent);
                 break;
@@ -54,17 +55,6 @@ public class PFhomePage extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.newsList);
         listView.setAdapter(newsAdapter);
-
-        logoutActivity = (Button)findViewById(R.id.logoutButton);
-        logoutActivity.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // Intent code for open new activity through intent.
-                Intent intent = new Intent(PFhomePage.this, PFLogin.class);
-                startActivity(intent);
-            }
-        });
 
     }
 }
