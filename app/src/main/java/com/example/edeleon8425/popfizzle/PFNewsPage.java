@@ -36,6 +36,10 @@ public class PFNewsPage extends AppCompatActivity {
                 Intent intent2 = new Intent(PFNewsPage.this, PFNewsPage.class);
                 startActivity(intent2);
                 break;
+            case R.id.item4:
+                Intent intent4 = new Intent(PFNewsPage.this, PFFunnyImages.class);
+                startActivity(intent4);
+                break;
             case R.id.item5:
                 Intent intent5 = new Intent(PFNewsPage.this, ContactUs.class);
                 startActivity(intent5);

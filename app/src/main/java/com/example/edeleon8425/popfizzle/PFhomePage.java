@@ -39,6 +39,10 @@ public class PFhomePage extends AppCompatActivity {
                 Intent intent2 = new Intent(PFhomePage.this, PFNewsPage.class);
                 startActivity(intent2);
                 break;
+            case R.id.item4:
+                Intent intent4 = new Intent(PFhomePage.this, PFFunnyImages.class);
+                startActivity(intent4);
+                break;
             case R.id.item5:
                 Intent intent5 = new Intent(PFhomePage.this, ContactUs.class);
                 startActivity(intent5);

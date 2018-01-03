@@ -31,8 +31,9 @@
             android:screenDensity="xhdpi"
             android:screenSize="normal" />
     </compatible-screens>
-    <uses-permission android:name="android.permission.INTERNET" >
-    </uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:name=".stetho"
         android:allowBackup="true"
@@ -61,7 +62,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PFNewsPage" />
-        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".ContactUs" />
+        <activity android:name=".PFFunnyImages"></activity>
     </application>
 
 </manifest>
