@@ -42,6 +42,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service android:name=".BackgroundService" />
         <activity
             android:name=".PFLogin"
             android:configChanges="orientation|keyboardHidden|screenSize" />

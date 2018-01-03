@@ -62,6 +62,7 @@ public class PFhomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pfhome_page);
+        startService(new Intent(this, BackgroundService.class));
 
         findoutActivity = (Button) findViewById(R.id.nameButton);
         findoutActivity.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +73,5 @@ public class PFhomePage extends AppCompatActivity {
 
             }
         });
-
     }
 }
