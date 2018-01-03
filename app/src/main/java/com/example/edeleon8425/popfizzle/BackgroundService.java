@@ -20,12 +20,12 @@ public class BackgroundService extends IntentService{
     @Override
     protected void onHandleIntent(Intent intent) {
         showToast("Starting IntentService");
-//        try {
-//            Thread.sleep(10000);
-//        } catch (InterruptedException e) {
-//            Thread.currentThread().interrupt();
-//        }
-//        showToast("Finishing IntentService");
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        showToast("Finishing IntentService");
     }
     protected void showToast(final String msg) {
         //gets the main thread
